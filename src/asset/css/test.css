@@ -1,0 +1,67 @@
+.loginBox {
+    background-image: url("../image/blue.jpg");
+    min-height: 100px;
+    margin-top: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 420px;
+    height: 520px;
+    border-radius: 4%;
+
+}
+
+.logIn {
+    color: #a5b0a3;
+    font-family: "Releway", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: right;
+    margin-top: 3rem;
+
+}
+
+.logIn2 {
+    color: rgba(243, 138, 19, 0.99);
+    font-family: "Releway", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 5rem;
+
+}
+
+.logIn3 {
+    margin: 15px;
+    color: white;
+    font-family: "Releway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+
+
+}
+
+.loginText {
+    font-size: 20px;
+    font-family: "Releway", sans-serif;
+    color: antiquewhite;
+}
+
+.loginText2 {
+    font-size: 15px;
+    font-family: "Releway", sans-serif;
+    color: red;
+}
+
+.regBox {
+    background-image: url("../image/blue.jpg");
+    min-height: 100px;
+    margin-top: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: initial;
+    width: 420px;
+    height: 520px;
+    border-radius: 4%;
+}
