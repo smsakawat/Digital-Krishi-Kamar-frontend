@@ -4,6 +4,7 @@ import PageTop from "../components/PageTop/PageTop";
 import Services from "../components/Services/Services";
 import ContactSection from "../components/ContactSection/ContactSection";
 import Footer from "../components/Footer/Footer";
+import Header from '../components/Header/Header';
 
 class ServicePage extends Component {
     componentDidMount() {
@@ -14,7 +15,7 @@ class ServicePage extends Component {
     render() {
         return (
             <Fragment>
-                <TopNavigation title="Service"/>
+                <Header title="Service"/>
                 <PageTop pagetitle="My Services"/>
                 <Services/>
                 <ContactSection/>

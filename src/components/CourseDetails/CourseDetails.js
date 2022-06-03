@@ -11,23 +11,11 @@ class CourseDetails extends Component {
                         <Container className="topPageContentCourse">
                             <Row>
                                 <Col lg={6} md={6} sm={12}>
-                                    <h3 className="courseFullTitle">
-                                        Full Dynamic Website with Admin Panel
-                                    </h3>
-                                    <h5 className="courseSubTitle">Total Student= 30</h5>
-                                    <h5 className="courseSubTitle mt-0">Total Courses= 30</h5>
+                                    
 
                                 </Col>
                                 <Col lg={6} md={6} sm={12}>
-                                    <p className="courseDescription">At vero eos et accusamus et iusto odio dignissimos
-                                        ducimus qui blanditiis
-                                        praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                        excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-                                        officia deserunt mollitia praesentium voluptatum deleniti atque corrupti quos
-                                        dolores et quas molestias
-                                        excepturi sint occaecati cupiditate non provident, similique sunt in culpa
-                                        qui </p>
-
+                                    
                                 </Col>
                             </Row>
                         </Container>
@@ -36,19 +24,19 @@ class CourseDetails extends Component {
                 <Container className="mt-5">
                     <Row>
                         <Col lg={6} md={6} sm={12}>
-                            <h1 className="serviceName"> Skill You Get</h1>
+                            <h1 className="serviceName"> Calculated rent:</h1>
                             <ul>
 
-                                <li className="serviceDescription">Unlimited Dynamic Product Category</li>
-                                <li className="serviceDescription">Unlimited Dynamic Product Category</li>
-                                <li className="serviceDescription">Unlimited Dynamic Product Category</li>
-                                <li className="serviceDescription">Unlimited Dynamic Product Category</li>
-                                <li className="serviceDescription">Unlimited Dynamic Product Category</li>
-                                <li className="serviceDescription">Unlimited Dynamic Product Category</li>
-                                <li className="serviceDescription">Unlimited Dynamic Product Category</li>
+                                <li className="serviceDescription">Minimum rent: $277.00 excl. GST</li>
+                                <li className="serviceDescription">Primary production – perpetual leases: 1.5% of the land value
+</li>
+                                <li className="serviceDescription">Primary production – term leases, licences and permits to occupy: 0.75% of the land value
+</li>
+                                <li className="serviceDescription">The annual rent is capped at no more than 10% above the previous year's annual rent</li>
+                                
                                 <br/>
 
-                                <Button variant="primary">BUY NOw</Button>
+                                <Button variant="primary">Documents</Button>
 
                             </ul>
 

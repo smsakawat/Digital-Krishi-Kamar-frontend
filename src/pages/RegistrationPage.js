@@ -1,8 +1,10 @@
 import React, {Component, Fragment} from 'react';
 import TopNavigation from "../components/TopNavigation/TopNavigation";
 import PageTop from "../components/PageTop/PageTop";
-import Riad from "../components/Riad/Riad";
+
 import Footer from "../components/Footer/Footer";
+import SignUp from '../components/SignUp/SignUp';
+import Header from '../components/Header/Header';
 
 class RegistrationPage extends Component {
     componentDidMount() {
@@ -13,9 +15,9 @@ class RegistrationPage extends Component {
     render() {
         return (
             <Fragment>
-                <TopNavigation title="About"/>
+                <Header title="Registration"/>
                 <PageTop pagetitle="Registration System"/>
-                <Riad/>
+                <SignUp/>
                 <Footer/>
 
             </Fragment>

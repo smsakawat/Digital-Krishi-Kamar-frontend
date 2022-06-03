@@ -5,10 +5,14 @@ import '../../asset/css/custom.css'
 import '../../asset/css/bootstrap.min.css';
 import {NavLink} from "react-router-dom"
 import {Container, Nav, Navbar,} from "react-bootstrap";
+import { useHistory } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import { Button } from 'bootstrap';
+import ManageUserState from '../../ManageUsertate/ManageUserState';
 
 class TopNavigation extends Component {
 
-
+   
     constructor(props) {
         super();
         this.state = {
@@ -17,7 +21,8 @@ class TopNavigation extends Component {
             navVariant: "dark",
             navBarBack: "navBackground",
             navBarITem: "navItem",
-            pageTitle: props.title
+            pageTitle: props.title,
+         
 
 
         }
@@ -45,7 +50,8 @@ class TopNavigation extends Component {
 
 
     componentDidMount() {
-        window.addEventListener('scroll', this.onScroll)
+        window.addEventListener('scroll', this.onScroll);
+
     }
 
     render() {
@@ -82,13 +88,6 @@ class TopNavigation extends Component {
                                 <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
                                                     className={this.state.navBarITem}
                                                     to="/about">ABOUT</NavLink></Nav.Link>
-                                <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
-                                                    className={this.state.navBarITem}
-                                                    to="/login">LOGIN</NavLink></Nav.Link>
-                                <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
-                                                    className={this.state.navBarITem}
-                                                    to="/registration">REGISTRATION</NavLink></Nav.Link>
-
 
                             </Nav>
                         </Navbar.Collapse>

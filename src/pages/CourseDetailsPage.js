@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import TopNavigation from "../components/TopNavigation/TopNavigation";
 import Footer from "../components/Footer/Footer";
 import CourseDetails from "../components/CourseDetails/CourseDetails";
+import Header from '../components/Header/Header';
 
 class CourseDetailsPage extends Component {
     componentDidMount() {
@@ -12,7 +13,7 @@ class CourseDetailsPage extends Component {
     render() {
         return (
             <Fragment>
-                <TopNavigation title="Course Details"/>
+                <Header title="Course Details"/>
                 <CourseDetails/>
                 <Footer/>
 

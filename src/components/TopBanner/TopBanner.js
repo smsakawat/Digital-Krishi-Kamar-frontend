@@ -10,8 +10,8 @@ class TopBanner extends Component {
     constructor() {
         super();
         this.state = {
-            title: "",
-            subtitle: ""
+            title: ",,,,,,,,,,",
+            subtitle: ",,,,,,,,,"
         }
     }
 
@@ -19,7 +19,9 @@ class TopBanner extends Component {
         RestClient.GetRequest(AppUrl.HomeTitle).then(result => {
             this.setState({title: result[1]['home_title'], subtitle: result[1]['home_subtitle']})
 
-        });
+        }).catch(error=>{
+            this.setState({title:"??????",subtitle:"??????"})
+        })
 
     }
 

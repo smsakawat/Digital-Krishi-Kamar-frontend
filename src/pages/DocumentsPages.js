@@ -3,6 +3,7 @@ import Footer from "../components/Footer/Footer";
 import PageTop from "../components/PageTop/PageTop";
 import TopNavigation from "../components/TopNavigation/TopNavigation";
 import Documents from "../components/Documents/Documents";
+import Header from '../components/Header/Header';
 
 class DocumentsPages extends Component {
     componentDidMount() {
@@ -13,7 +14,7 @@ class DocumentsPages extends Component {
     render() {
         return (
             <Fragment>
-                <TopNavigation title="About"/>
+                <Header title="About"/>
                 <PageTop pagetitle="Papers Documents"/>
                 <Documents/>
 

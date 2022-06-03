@@ -3,6 +3,7 @@ import TopNavigation from "../components/TopNavigation/TopNavigation";
 import PageTop from "../components/PageTop/PageTop";
 import Footer from "../components/Footer/Footer";
 import PrivacyDescription from "../components/PrivacyDescription/PrivacyDescription";
+import Header from '../components/Header/Header';
 
 class PrivacyPage extends Component {
     componentDidMount() {
@@ -14,7 +15,7 @@ class PrivacyPage extends Component {
         return (
             <Fragment>
 
-                <TopNavigation title="Privay Policy"/>
+                <Header title="Privay Policy"/>
                 <PageTop pagetitle="Privay Policy"/>
                 <PrivacyDescription/>
                 <Footer/>

@@ -3,6 +3,7 @@ import TopNavigation from "../components/TopNavigation/TopNavigation";
 import PageTop from "../components/PageTop/PageTop";
 import Footer from "../components/Footer/Footer";
 import RefundSection from "../components/RefundDescription/RefundSection";
+import Header from '../components/Header/Header';
 
 class RefundPage extends Component {
     componentDidMount() {
@@ -13,7 +14,7 @@ class RefundPage extends Component {
     render() {
         return (
             <Fragment>
-                <TopNavigation title="Refund Policy"/>
+                <Header title="Refund Policy"/>
                 <PageTop pagetitle="Refund Policy"/>
                 <RefundSection/>
                 <Footer/>

@@ -3,6 +3,7 @@ import TopNavigation from "../components/TopNavigation/TopNavigation";
 import PageTop from "../components/PageTop/PageTop";
 import Footer from "../components/Footer/Footer";
 import TermsDescription from "../components/TermsDescription/TermsDescription";
+import Header from '../components/Header/Header';
 
 class TermsPage extends Component {
     componentDidMount() {
@@ -14,7 +15,7 @@ class TermsPage extends Component {
         return (
             <Fragment>
 
-                <TopNavigation title="Terms & Condition"/>
+                <Header title="Terms & Condition"/>
                 <PageTop pagetitle="Terms & Condition"/>
                 <TermsDescription/>
                 <Footer/>

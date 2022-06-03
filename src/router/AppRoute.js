@@ -15,35 +15,48 @@ import RegistrationPage from "../pages/RegistrationPage";
 import LoginPage from "../pages/LoginPage";
 import GooglePage from "../pages/GooglePage";
 import DocumentsPages from "../pages/DocumentsPages";
+import AuthProvider from '../AuthProvider/AuthProvider';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import Dashboard from '../pages/Dashboard/Dashboard';
+
 
 class AppRoute extends Component {
     render() {
         return (
-            <Fragment>
+            <AuthProvider>
+                <Fragment>
 
 
-                <Switch>
-                    <Route exact path="/" component={HomePage}/>
-                    <Route exact path="/service" component={ServicePage}/>
-                    <Route exact path="/sale" component={CoursesPage}/>
-                    <Route exact path="/rent" component={PortfolioPage}/>
-                    <Route exact path="/contact" component={ContactPage}/>
-                    <Route exact path="/about" component={AboutPage}/>
-                    <Route exact path="/refund" component={RefundPage}/>
-                    <Route exact path="/terms" component={TermsPage}/>
-                    <Route exact path="/privacy" component={PrivacyPage}/>
-                    <Route exact path="/projectDetails" component={ProjectDetailsPage}/>
-                    <Route exact path="/courseDetails" component={CourseDetailsPage}/>
-                    <Route exact path="/login" component={LoginPage}/>
-                    <Route exact path="/registration" component={RegistrationPage}/>
-                    <Route exact path="/map" component={GooglePage}/>
-                    <Route exact path="/documents" component={DocumentsPages}/>
+<Switch>
+    <Route exact path="/" component={HomePage}/>
+    <Route exact path="/service" component={ServicePage}/>
+    <PrivateRoute path="/sale">
+        <CoursesPage/>
+    </PrivateRoute>
+    <PrivateRoute path="/rent">
+        <PortfolioPage/>
+    </PrivateRoute>
+    <PrivateRoute exact path="/dashboard">
+        <Dashboard/>
+    </PrivateRoute>
+    <Route exact path="/contact" component={ContactPage}/>
+    <Route path="/about" component={AboutPage}/>
+    <Route exact path="/refund" component={RefundPage}/>
+    <Route exact path="/terms" component={TermsPage}/>
+    <Route exact path="/privacy" component={PrivacyPage}/>
+    <Route exact path="/projectDetails" component={ProjectDetailsPage}/>
+    <Route exact path="/courseDetails" component={CourseDetailsPage}/>
+    <Route exact path="/login" component={LoginPage}/>
+    <Route exact path="/registration" component={RegistrationPage}/>
+    <Route exact path="/map" component={GooglePage}/>
+    <Route exact path="/documents" component={DocumentsPages}/>
 
 
-                </Switch>
+</Switch>
 
 
-            </Fragment>
+</Fragment>
+            </AuthProvider>
         );
 
     }
