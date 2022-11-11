@@ -20,7 +20,7 @@ const FourCards = () => {
                                    
                                    <Link  to="/courseDetails">
 
-                                   <Card.Img className='four-images' variant="top" src={picture}   ></Card.Img>
+                                   <div className="image-box"><Card.Img className='image' variant="top" src={picture}   ></Card.Img></div>
                                     <Card.Body>
                                         <Card.Title className='newTitle'>{title}</Card.Title>
                                         {/* <Card.Text className='newsSubTitle'>
@@ -48,7 +48,7 @@ const FourCards = () => {
                                    
                                    <Link  to="/courseDetails">
 
-                                   <Card.Img className='four-images' variant="top" src={picture}   ></Card.Img>
+                                   <div className="image-box"><Card.Img className='image' variant="top" src={picture}   ></Card.Img></div>
                                     <Card.Body>
                                         <Card.Title className='newTitle'>{title}</Card.Title>
                                         {/* <Card.Text className='newsSubTitle'>
@@ -76,7 +76,7 @@ const FourCards = () => {
                                    
                                    <Link  to="/courseDetails">
 
-                                   <Card.Img className='four-images' variant="top" src={picture}   ></Card.Img>
+                                   <div className="image-box"><Card.Img className='image' variant="top" src={picture}   ></Card.Img></div>
                                     <Card.Body>
                                         <Card.Title className='newTitle'>{title}</Card.Title>
                                         {/* <Card.Text className='newsSubTitle'>
@@ -104,7 +104,7 @@ const FourCards = () => {
                                    
                                    <Link  to="/courseDetails">
 
-                                   <Card.Img className='four-images' variant="top" src={picture}   ></Card.Img>
+                                   <div className="image-box"><Card.Img className='image' variant="top" src={picture}   ></Card.Img></div>
                                     <Card.Body>
                                         <Card.Title className='newTitle'>{title}</Card.Title>
                                         {/* <Card.Text className='newsSubTitle'>
