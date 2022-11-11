@@ -19,9 +19,7 @@ class RecentProjects extends Component {
                                         4 kata, 300 feet Road
                                         just one KM east of Bashundhara Convention Center
                                     </Card.Text>
-                                    <Button className="buttonCentering"><Link className="linkStyle"
-                                                                              to="/ProjectDetails">Details</Link>
-                                    </Button>
+                                    <Button className="buttonCentering"><Link className="linkStyle"to="/ProjectDetails">Details</Link></Button>
                                 </Card.Body>
                             </Card>
 

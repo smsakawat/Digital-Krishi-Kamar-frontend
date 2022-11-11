@@ -14,15 +14,13 @@ class AllCourses extends Component {
                             <Row>
                                 <Col lg={6} md={6} sm={12}>
                                     <img className="courseImage"
-                                         src="https://image.shutterstock.com/image-photo/vacant-land-that-has-sold-600w-13365145.jpg"/>
+                                    src="https://image.shutterstock.com/image-photo/vacant-land-that-has-sold-600w-13365145.jpg"/>
                                 </Col>
 
                                 <Col lg={6} md={6} sm={12}>
-                                    <h5 className="text-start courseTitle">Web Development</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <h5 className="text-start courseTitle">Dhaka 300 Feet</h5>
+                                    <p className="text-start courseDes">4 kata, 300 feet Road
+                                        just one KM east of Bashundhara Convention Center</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -39,11 +37,8 @@ class AllCourses extends Component {
                                 </Col>
 
                                 <Col lg={6} md={6} sm={12}>
-                                    <h5 className="text-start courseTitle">Web Development</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <h5 className="text-start courseTitle">CHITTAGONG</h5>
+                                    <p className="text-start courseDes"> 5 katha, Under Development Residential Plot for Sale at khulshi</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -60,11 +55,8 @@ class AllCourses extends Component {
                                 </Col>
 
                                 <Col lg={6} md={6} sm={12}>
-                                    <h5 className="text-start courseTitle">Web Development</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <h5 className="text-start courseTitle">KHULNA</h5>
+                                    <p className="text-start courseDes">5 katha, Ready Residential Plot for Sale at nowadighi</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -81,11 +73,8 @@ class AllCourses extends Component {
                                 </Col>
 
                                 <Col lg={6} md={6} sm={12}>
-                                    <h5 className="text-start courseTitle">Web Development</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <h5 className="text-start courseTitle">Dhaka 300 Feet</h5>
+                                    <p className="text-start courseDes">4 kata, 300 feet Road just one KM east of Bashundhara Convention Center</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -101,11 +90,8 @@ class AllCourses extends Component {
                                 </Col>
 
                                 <Col lg={6} md={6} sm={12}>
-                                    <h5 className="text-start courseTitle">Web Development</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <h5 className="text-start courseTitle">CHITTAGONG</h5>
+                                    <p className="text-start courseDes">5 katha, Under Development Residential Plot for Sale at khulshi</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -121,11 +107,8 @@ class AllCourses extends Component {
                                 </Col>
 
                                 <Col lg={6} md={6} sm={12}>
-                                    <h5 className="text-start courseTitle">Web Development</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <h5 className="text-start courseTitle">KHULNA</h5>
+                                    <p className="text-start courseDes">5 katha, Ready Residential Plot for Sale at nowadighi</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -141,11 +124,8 @@ class AllCourses extends Component {
                                 </Col>
 
                                 <Col lg={6} md={6} sm={12}>
-                                    <h5 className="text-start courseTitle">Web Development</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <h5 className="text-start courseTitle">CHITTAGONG</h5>
+                                    <p className="text-start courseDes">5 katha, Ready Residential Plot for Sale at nowadighi</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -161,11 +141,8 @@ class AllCourses extends Component {
                                 </Col>
 
                                 <Col lg={6} md={6} sm={12}>
-                                    <h5 className="text-start courseTitle">Web Development</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <h5 className="text-start courseTitle">KHULNA</h5>
+                                    <p className="text-start courseDes">5 katha, Ready Residential Plot for Sale at nowadighi</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>

@@ -4,14 +4,13 @@ import { Link, useHistory } from "react-router-dom";
 import useAuth from '../../hooks/useAuth'
 import {useState} from 'react';
 import {Button, Col, Container, Row} from "react-bootstrap";
+import RestClient from '../../RestAPI/RestClient';
+import AppUrl from '../../RestAPI/AppUrl';
 
 
 const SignUp = () => {
-   const { user,setUser,registerUser,setIsLoading,saveUser} = useAuth();
-      
+   const { user,setUser,registerUser,setIsLoading} = useAuth();
       const history = useHistory();
-    
-    
       const [error, setError] = useState(false);
       const [passError, setPassError] = useState(false);
       const {
@@ -20,6 +19,32 @@ const SignUp = () => {
         reset,
         // formState: { errors },
       } = useForm();
+
+// Adding users after signing up to web page
+// function saveUser(name,email,mobile,nidNo){
+//   const user = {
+// name:name,
+// email:email,
+// mobile:mobile,
+// nidNo:nidNo
+//   }
+//   const url = "http://127.0.0.1:8000/SaveUser";
+
+// fetch(url,{
+//   mode:"no-cors",
+//   method:"POST",
+//   body:JSON.stringify(user),
+//   headers: {
+//     "Content-type": "application/json"
+// },
+
+
+// })
+// .then(res=>res.json())
+// .then(res=>console.log(res.data))
+// .catch(err=>console.log(err.response))
+// }
+
     //   show user
     useEffect(()=>{
     console.log(user)
@@ -46,11 +71,13 @@ const SignUp = () => {
         // register user with google
         registerUser(data.email, data.password)
           .then((result) => {
+            console.log(data);
+            console.log(data.displayName)
             setUser({ ...user, email: data.email, displayName: data.name,mobile:data.mobile,nidNo: data.nidNo });
            alert("Registration successfull")
-            history.push("/");
-            saveUser(data.name,data.email,data.mobile,data.nidNo)
-            console.log(user)
+            history.push("/dashboard");
+            // saveUser(data.name,data.email,data.mobile,data.nidNo)
+         
           })
           .catch((err) => {
             alert("Something went wrong")
@@ -71,36 +98,39 @@ return (
                 <Container className="regBox">
                     <Row>
 
-                        <Col lg={6} md={6} sm={12}>
+                       
                             <form  noValidate
               autoComplete="off"
               onSubmit={handleSubmit(onSubmit)}>
 
-                                <h3 className="logIn">Create Account</h3>
+                                <h3 className="signUPHeader">SIGN UP</h3>
 
                                 <div className="form-group">
                                     <label className="loginText">Name</label>
-                                    <input  {...register("name")} type="text" className="form-control" placeholder="Enter name"/>
+                                    <input style={{borderRadius:"20px"}}  {...register("name")} type="text" className="form-control" placeholder="Enter name"/>
                                 </div>
+                                <br/>
                                 <div className="form-group">
                                     <label className="loginText">Email</label>
-                                    <input  {...register("email")} email type="email" className="form-control" placeholder="Enter email"/>
+                                    <input style={{borderRadius:"20px"}} {...register("email")} email type="email" className="form-control" placeholder="Enter email"/>
                                 </div>
+                                <br/>
                                 <div className="form-group">
                                     <label className="loginText">Mobile No</label>
-                                    <input {...register("mobile")} type="number" className="form-control" placeholder="Enter mobile no"/>
+                                    <input style={{borderRadius:"20px"}} {...register("mobile")} type="text" className="form-control" placeholder="Enter mobile no"/>
                                 </div>
+                                <br/>
                                 <div className="form-group">
-                                    <label className="loginText">National ID</label>
-                                    <input {...register("nidNo")} type="number" className="form-control" placeholder="Enter nid no"/>
+                                    <label  className="loginText">National ID</label>
+                                    <input style={{borderRadius:"20px"}} {...register("nidNo")} type="text" className="form-control" placeholder="Enter nid no"/>
                                 </div>
-
+                                <br/>
                                 <div className="form-group">
                                     <label className="loginText">Password</label>
-                                    <input  {...register("password")} type="password" className="form-control"
+                                    <input style={{borderRadius:"20px"}}  {...register("password")} type="password" className="form-control"
                                            placeholder="Enter password"/>
                                 </div>
-
+                                
                                 <div className="form-group">
                                     <div className="custom-control custom-checkbox">
                                         <input  {...register("remember")} type="checkbox" className="custom-control-input"
@@ -110,17 +140,18 @@ return (
                                     </div>
                                 </div>
 
-                                <Button variant="success" type="submit">Sign Up</Button>
+                                <Button variant="success" type="submit" >Sign Up</Button> 
                                 {error && (
                 <p style={{ color: "red", letterSpacing: "1px",marginTop:"5px" }}>
                   input fields cannot be empty
                 </p>
               )}
+               <br/>
                                 <p className="loginText2">
                                     Forgot, <a className="loginText" href="#">password?</a>
                                 </p>
                             </form>
-                        </Col>
+                      
 
 
                     </Row>
@@ -129,6 +160,7 @@ return (
 
 
         </Container>
+
 
 
     </>

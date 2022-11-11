@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer";
 import AllProjects from "../components/AllProjects/AllProjects";
 import TopNavigation from "../components/TopNavigation/TopNavigation";
 import Header from '../components/Header/Header';
+import AgroGib from "../components/AgroGib/AgroGib";
 
 class PortfolioPage extends Component {
     componentDidMount() {
@@ -14,9 +15,10 @@ class PortfolioPage extends Component {
     render() {
         return (
             <Fragment>
-                <Header title="Portfolio"/>
-                <PageTop pagetitle="FOR RENT"/>
-                <AllProjects/>
+                <Header title="এগ্রো বিজনেস কমুনিটি"/>
+                <PageTop pagetitle="এগ্রো বিজনেস কমুনিটি"/>
+                <AgroGib />
+                {/* <AllProjects/> */}
                 <Footer/>
 
             </Fragment>

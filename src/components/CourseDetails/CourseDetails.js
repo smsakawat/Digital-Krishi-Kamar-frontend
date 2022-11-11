@@ -6,7 +6,7 @@ class CourseDetails extends Component {
     render() {
         return (
             <Fragment>
-                <Container fluid={true} className="topFixedPage p-0">
+                <Container fluid={true} className="topFixedPage p-0 ">
                     <div className="topPageOverlay">
                         <Container className="topPageContentCourse">
                             <Row>

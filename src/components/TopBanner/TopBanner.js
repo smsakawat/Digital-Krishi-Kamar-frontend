@@ -10,8 +10,8 @@ class TopBanner extends Component {
     constructor() {
         super();
         this.state = {
-            title: ",,,,,,,,,,",
-            subtitle: ",,,,,,,,,"
+            title: "",
+            subtitle: ""
         }
     }
 
@@ -31,13 +31,16 @@ class TopBanner extends Component {
             <Fragment>
                 <Container fluid={true} className="topFixedBanner p-0">
                     <div className="topBannerOverlay">
+                   
                         <Container className="topContent">
                             <Row>
+                                
                                 <Col className="text-center">
-                                    <h1 className="topTitle">{this.state.title}</h1>
-                                    <h4 className="topSubTitle">{this.state.subtitle}</h4>
+                                    
+                                    <h1 className="topTitle">আধুনিক কৃষি খামার</h1>
+                                    <h4 className="topSubTitle">কৃষি ও কৃষকের কথা বলে</h4>
                                     <Button variant="success"><Link className="linkStyle"
-                                                                    to="/contact">MORE INFO</Link></Button>
+                                                                    to="/contact">আরও জানতে...</Link></Button>
                                 </Col>
                             </Row>
                         </Container>

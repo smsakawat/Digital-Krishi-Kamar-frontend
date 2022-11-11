@@ -18,6 +18,9 @@ import DocumentsPages from "../pages/DocumentsPages";
 import AuthProvider from '../AuthProvider/AuthProvider';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import Dashboard from '../pages/Dashboard/Dashboard';
+import EcomPage from '../pages/EcomPage';
+import EcomDetailsPage from '../pages/EcomDetailsPage';
+import KrishiUddugtaPage from '../pages/KrishiUddugtaPage';
 
 
 class AppRoute extends Component {
@@ -29,6 +32,7 @@ class AppRoute extends Component {
 
 <Switch>
     <Route exact path="/" component={HomePage}/>
+    <Route exact path="/home" component={HomePage}/>
     <Route exact path="/service" component={ServicePage}/>
     <PrivateRoute path="/sale">
         <CoursesPage/>
@@ -50,6 +54,9 @@ class AppRoute extends Component {
     <Route exact path="/registration" component={RegistrationPage}/>
     <Route exact path="/map" component={GooglePage}/>
     <Route exact path="/documents" component={DocumentsPages}/>
+    <Route exact path="/Ecom" component={EcomPage}/>
+    <Route exact path="/EcomDetails" component={EcomDetailsPage}/>
+    <Route exact path="/krishiuddugta" component={KrishiUddugtaPage}/>
 
 
 </Switch>

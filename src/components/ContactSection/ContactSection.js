@@ -11,29 +11,29 @@ class ContactSection extends Component {
 
                     <Row>
                         <Col lg={6} md={6} sm={12}>
-                            <h1>Quick Connect</h1>
+                            <h1>দ্রুত যোগাযোগ করুন</h1>
                             <Form>
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Label className="serviceDescription"> Name</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter name"/>
+                                    <Form.Label className="serviceDescription">নাম</Form.Label>
+                                    <Form.Control type="text" placeholder="আপনার নাম লিখুন"/>
 
                                 </Form.Group>
 
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Label className="serviceDescription"> Email Address</Form.Label>
-                                    <Form.Control type="text" placeholder="name@example.com"/>
+                                    <Form.Label className="serviceDescription">ইমেল এড্রেস</Form.Label>
+                                    <Form.Control type="text" placeholder="আপনার ইমেল এড্রেসটি লিখুন"/>
 
                                 </Form.Group>
 
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Label className="serviceDescription"> Message</Form.Label>
+                                    <Form.Label className="serviceDescription">বার্তা</Form.Label>
                                     <Form.Control as="textarea" rows="3" type="text"/>
 
                                 </Form.Group>
 
 
-                                <Button variant="primary" type="submit">
-                                    Submit
+                                <Button variant="primary"  type="submit">
+                                    জমা দিন
                                 </Button>
                             </Form>
 
@@ -42,13 +42,12 @@ class ContactSection extends Component {
 
 
                         <Col lg={6} md={6} sm={12}>
-                            <h1>Discuss Now</h1>
-                            <p className="serviceDescription">Khondakar Para, 7No Ward, Chakaria, Cox's Bazar,
-                                Bangladesh</p>
-                            <p className="serviceDescription"><FontAwesomeIcon
-                                icon={faEnvelope}/> Riadchy37@gmail.com</p>
-                            <p className="serviceDescription"><FontAwesomeIcon
-                                icon={faPhone}/> +8801876980021</p>
+                            <h1 style={{marginLeft:'20px',color:'black'}}>আলোচনার জন্য</h1>
+                            <p className="serviceDescription"style={{marginLeft:'20px'}}> কন্দাকার পাড়া , ৭নং ওয়ার্ড, চকারিয়া ,কক্সবাজার ,বাংলাদেশ</p>
+                            <p className="serviceDescription" style={{marginLeft:'20px'}}><FontAwesomeIcon
+                                icon={faEnvelope}/> Pritampaul@gmail.com</p>
+                            <p className="serviceDescription" style={{marginLeft:'20px'}}><FontAwesomeIcon
+                                icon={faPhone}/> +৮৮০১৯৭৪৯৫৩৪৮৬</p>
 
                         </Col>
 

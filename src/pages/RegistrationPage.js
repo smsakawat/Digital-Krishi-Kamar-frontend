@@ -16,7 +16,7 @@ class RegistrationPage extends Component {
         return (
             <Fragment>
                 <Header title="Registration"/>
-                <PageTop pagetitle="Registration System"/>
+                {/* <PageTop pagetitle="Registration System"/> */}
                 <SignUp/>
                 <Footer/>
 

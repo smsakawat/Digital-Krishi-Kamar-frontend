@@ -10,6 +10,14 @@ import ClientReview from "../components/ClientReview/ClientReview";
 import Footer from "../components/Footer/Footer";
 import Services from "../components/Services/Services";
 import Header from '../components/Header/Header';
+import Nirbacitokhobor from '../components/Nirbacitokhobor/Nirbacitokhobor';
+import Orthouddug from '../components/Orthouddug/Orthouddug';
+import Slider from '../components/Slider/Slider';
+import FourCards from '../components/FourCards/FourCards';
+import AgroGib from '../components/AgroGib/AgroGib';
+import KGoveshonaTips from '../components/KGoveshonaTips/KGoveshonaTips';
+import FarmToProkriti from '../components/FarmToProkriti/FarmToProkriti';
+import News from '../components/News/News';
 
 
 class HomePage extends Component {
@@ -22,13 +30,21 @@ class HomePage extends Component {
     render() {
         return (
             <Fragment>
-              <Header title="Home"/>
+              <Header title="হোম"/>
                 <TopBanner/>
-                <Services/>
-                <Analysis/>
+                <News />
+                {/* <Services/> */}
+                <Slider />
+                <Nirbacitokhobor />
+                <FourCards />
+                <Orthouddug />
+                <AgroGib />
+                <KGoveshonaTips />
+                <FarmToProkriti />
+                {/* <Analysis/> */}
+                {/* <RecentProjects/> */}
+                {/* <Courses/> */}
                 <Summary/>
-                <RecentProjects/>
-                <Courses/>
                 <Video/>
                 <ClientReview/>
                 <Footer/>

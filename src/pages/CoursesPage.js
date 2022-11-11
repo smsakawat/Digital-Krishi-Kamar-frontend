@@ -4,6 +4,7 @@ import PageTop from "../components/PageTop/PageTop";
 import AllCourses from "../components/AllCourses/AllCourses";
 import Footer from "../components/Footer/Footer";
 import Header from '../components/Header/Header';
+import Orthouddug from '../components/Orthouddug/Orthouddug';
 
 class CoursesPage extends Component {
     componentDidMount() {
@@ -14,8 +15,9 @@ class CoursesPage extends Component {
     render() {
         return (
             <Fragment>
-                <Header title="course"/>
-                <PageTop pagetitle="FOR SALE"/>
+                <Header title="কৃষি ক্যাম্পাস"/>
+                <PageTop pagetitle="কৃষি ক্যাম্পাস"/>
+                <Orthouddug />
                 <AllCourses/>
                 <Footer/>
 

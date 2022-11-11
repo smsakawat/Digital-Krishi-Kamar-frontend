@@ -20,10 +20,7 @@ class Courses extends Component {
 
                                 <Col lg={6} md={6} sm={12}>
                                     <h5 className="text-start courseTitle">Dhaka 300 Feet</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <p className="text-start courseDes">4 kata, 300 feet Road just one KM east of Bashundhara Convention Center</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -41,10 +38,7 @@ class Courses extends Component {
 
                                 <Col lg={6} md={6} sm={12}>
                                     <h5 className="text-start courseTitle">Chittagong Khulshi</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <p className="text-start courseDes">5 katha, Under Development Residential Plot for Sale at khulshi</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -62,10 +56,7 @@ class Courses extends Component {
 
                                 <Col lg={6} md={6} sm={12}>
                                     <h5 className="text-start courseTitle">Cox's Bazar Cantonment</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <p className="text-start courseDes">5 katha, Ready Residential Plot for Sale at nowadighi</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>
@@ -83,10 +74,7 @@ class Courses extends Component {
 
                                 <Col lg={6} md={6} sm={12}>
                                     <h5 className="text-start courseTitle">Khulna Abashik</h5>
-                                    <p className="text-start courseDes">I build native and cross platform mobile app for
-                                        your
-                                        business app for your
-                                        business</p>
+                                    <p className="text-start courseDes">5 katha, Ready Residential Plot for Sale at nowadighi</p>
                                     <Link className="courseDetails" to="/courseDetails">Details</Link>
 
                                 </Col>

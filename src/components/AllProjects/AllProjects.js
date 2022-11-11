@@ -16,8 +16,8 @@ class AllProjects extends Component {
                                 <Card.Body>
                                     <Card.Title className="projectCardTitle text-center">Dhaka 300 Feet</Card.Title>
                                     <Card.Text className="projectCardDes">
-                                        I build native and cross platform mobile app for your business app for your
-                                        business
+                                    4 kata, 300 feet Road
+                                        just one KM east of Bashundhara Convention Center
                                     </Card.Text>
                                     <Button className="buttonCentering"><Link className="linkStyle"
                                                                               to="/ProjectDetails">Details</Link></Button>
@@ -33,8 +33,7 @@ class AllProjects extends Component {
                                 <Card.Body>
                                     <Card.Title className="projectCardTitle text-center">Chittagong Khulshi</Card.Title>
                                     <Card.Text className="projectCardDes">
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
+                                    5 katha, Under Development Residential Plot for Rent at khulshi
                                     </Card.Text>
                                     <Button className="buttonCentering"><Link className="linkStyle"
                                                                               to="/ProjectDetails">Details</Link></Button>
@@ -51,8 +50,7 @@ class AllProjects extends Component {
                                     <Card.Title className="projectCardTitle text-center">Cox's Bazar
                                         Cantonment</Card.Title>
                                     <Card.Text className="projectCardDes">
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
+                                    5 katha, Ready Residential Plot for Rent at nowadighi
                                     </Card.Text>
                                     <Button className="buttonCentering"><Link className="linkStyle"
                                                                               to="/ProjectDetails">Details</Link></Button>
@@ -68,8 +66,7 @@ class AllProjects extends Component {
                                 <Card.Body>
                                     <Card.Title className="projectCardTitle text-center">Khulna Abashik</Card.Title>
                                     <Card.Text className="projectCardDes">
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
+                                    5 katha, Ready Residential Plot for Rent at nowadighi
                                     </Card.Text>
                                     <Button className="buttonCentering"><Link className="linkStyle"
                                                                               to="/ProjectDetails">Details</Link></Button>
@@ -83,11 +80,10 @@ class AllProjects extends Component {
                                 <Card.Img variant="top"
                                           src="https://media.sciencephoto.com/c0/46/76/72/c0467672-800px-wm.jpg"/>
                                 <Card.Body>
-                                    <Card.Title className="projectCardTitle text-center">Bohordarhat abashik B-Block 2No
+                                    <Card.Title className="projectCardTitle text-center">Bohordarhat abashik B-Block 1No
                                         Road </Card.Title>
                                     <Card.Text className="projectCardDes">
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
+                                    5 katha, Ready Residential Plot for Rent at nowadighi
                                     </Card.Text>
                                     <Button className="buttonCentering"><Link className="linkStyle"
                                                                               to="/ProjectDetails">Details</Link></Button>
@@ -103,8 +99,7 @@ class AllProjects extends Component {
                                     <Card.Title className="projectCardTitle text-center">Chakaria Biddapit
                                         area</Card.Title>
                                     <Card.Text className="projectCardDes">
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
+                                    5 katha, Ready Residential Plot for Rent at nowadighi
                                     </Card.Text>
                                     <Button className="buttonCentering"><Link className="linkStyle"
                                                                               to="/ProjectDetails">Details</Link></Button>

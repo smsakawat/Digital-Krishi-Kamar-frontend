@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+
+/* COMMON STYLES */
+
+.newTitle:hover{
+  color: #666 !important;
+}
+.card:hover .newTitle{
+color: #666 !important;
+}

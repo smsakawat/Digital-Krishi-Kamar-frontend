@@ -57,22 +57,30 @@ class TopNavigation extends Component {
     render() {
         return (
             <Fragment>
+                
                 <title>{this.state.pageTitle}</title>
                 <Navbar variant={this.state.navVariant} className={this.state.navBarBack} fixed={"top"} collapseOnSelect
                         expand="lg">
                     <Container>
-                        <Navbar.Brand><NavLink className={this.state.navBarTitle} to="/"><img
-                            src={this.state.navBarLogo}/> R@ Real Estate
-                            Company</NavLink></Navbar.Brand>
+                        <Navbar.Brand><NavLink className={this.state.navBarTitle} to="/">
+                            {/* <imgsrc={this.state.navBarLogo}/> */}
+                            আধুনিক কৃষি খামার</NavLink></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
+                            
+                               
+                         
+                            
 
                             </Nav>
                             <Nav>
+
+                            
+
                                 <Nav.Link><NavLink exact activeStyle={{color: '#0a8ee'}}
                                                    className={this.state.navBarITem}
-                                                   to="/">HOME</NavLink></Nav.Link>
+                                                   to="/">riad</NavLink></Nav.Link>
                                 <Nav.Link><NavLink exact activeStyle={{color: '#0a8ee'}}
                                                    className={this.state.navBarITem}
                                                    to="/service">SERVICES</NavLink></Nav.Link>
@@ -90,6 +98,9 @@ class TopNavigation extends Component {
                                                     to="/about">ABOUT</NavLink></Nav.Link>
 
                             </Nav>
+                          
+                            
+                            
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>

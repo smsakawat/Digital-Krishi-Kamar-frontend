@@ -5,6 +5,7 @@ import {Button, Col, Container, Row} from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from '../../hooks/useAuth';
+import { textAlign } from '@mui/system';
 
 
 
@@ -14,13 +15,13 @@ const Login = () => {
     const { loginWithEmail, setIsLoading} = useAuth();
     const history = useHistory();
     const location = useLocation();
-    const redirect_url = location.state?.from || "/";
+    const redirect_url = location.state?.from || "/dashboard";
   
     const {
       register,
       handleSubmit,
       reset,
-      formState: { errors },
+      formState: {errors},
     } = useForm();
   
     const onSubmit = (data) => {
@@ -48,27 +49,28 @@ const Login = () => {
     };
     return (
         <Fragment>
-            <Container fluid={true} className="topFixedPage p-5">
+            <Container fluid={true} className="topFixedPage p-5 ">
                 <div>
-                    <Container className="loginBox">
+                    <Container className="loginBox ">
                         <Row>
 
-                            <Col lg={6} md={6} sm={12}>
-                                <form  noValidate
+                            
+                                <form style={{borderRadius: '1rem', maxWidth: '400px'}} noValidate
               autoComplete="off"
               onSubmit={handleSubmit(onSubmit)}>
 
-                                    <h3 className="logIn">Login</h3>
+                                    <h3 className="logIn">SIGN IN</h3>
+                                    <h5 className="loginSubHead">Please enter your login and password!</h5>
 
                                     <div className="form-group">
                                         <label className="loginText">Email</label>
-                                        <input  {...register("email")} type="email" className="form-control" placeholder="Enter email"
+                                        <input  {...register("email")} type="email" className="form-control" style={{borderRadius:"20px"}} placeholder="Enter email"
                                               />
                                     </div>
-
+<br/>
                                     <div className="form-group">
                                         <label className="loginText">Password</label>
-                                        <input {...register("password")} type="password" className="form-control"
+                                        <input {...register("password")} type="password" style={{borderRadius:"20px"}} className="form-control"
                                                placeholder="Enter password" />
                                     </div>
 
@@ -83,17 +85,17 @@ const Login = () => {
                   Invalid Email or Password
                 </p>
               )}
-                                   <p style={{ letterSpacing: "1px", margin: "3px 0" ,color:"#fff"}}>
+                                   <p style={{ letterSpacing: "1px", margin: "3px 0",marginTop:"5rem ",color:"#fff" ,textAlign:"center"}}>
                 Not have an account?
                 <Link
-                  to={{ pathname: "/register", query: { redirect_url } }}
+                  to="/registration"
                   style={{ color: "lightBlue", textDecoration: "none" }}
                 >
                   Register!
                 </Link>
               </p>
                                 </form>
-                            </Col>
+                           
 
 
                         </Row>

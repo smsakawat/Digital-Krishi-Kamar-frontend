@@ -3,14 +3,11 @@ import {useState,useEffect} from 'react'
 import {
   createUserWithEmailAndPassword,
   getAuth,
-  getIdToken,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
   updateProfile
 } from "firebase/auth";
-
-
 import initializeAuthenticaiton from "../Firebase/firebase.init";
 
 // initialize firebase
@@ -82,36 +79,7 @@ const useFirebase = () => {
   }
   }, [user.email]);
 
-//  adding user to database after login..should call this after succesfull sign up
 
-const saveUser =(email,name,mobile,nidNo)=>{
-const user = {name:name,email:email,mobile:mobile,nidNo:nidNo}
-console.log(user)
-// sending req top add user
-fetch("http://127.0.0.1:8000/SaveUser", {
-     mode:"no-cors",
-    // Adding method type
-    method: "POST",
-     
-    // Adding body or contents to send
-    body: JSON.stringify(user),
-     
-    // Adding headers to the request
-    headers: {
-        "Content-type": "application/json; charset=UTF-8"
-    }
-})
- 
-// Converting to JSON
-.then(response => response.json())
- 
-// Displaying results to console
-.then(json => console.log(json))
-.catch(err=>{
-  console.log(err.response)
-})
-;
-}
   return {
     user,
     setUser,
@@ -122,7 +90,7 @@ fetch("http://127.0.0.1:8000/SaveUser", {
     setIsLoading,
     loginWithEmail,
     logOut,
-    saveUser
+    
 
   
   

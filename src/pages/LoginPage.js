@@ -1,9 +1,8 @@
 import React, {Component, Fragment} from 'react';
 import Login from "../components/Login/Login";
-import TopNavigation from "../components/TopNavigation/TopNavigation";
-import PageTop from "../components/PageTop/PageTop";
 import Footer from "../components/Footer/Footer";
 import Header from '../components/Header/Header';
+
 
 class LoginPage extends Component {
     componentDidMount() {
@@ -16,7 +15,7 @@ class LoginPage extends Component {
             <Fragment>
                 <Header
                  title="About"/>
-                <PageTop pagetitle="Login System"/>
+                {/* <PageTop pagetitle="Login System"/> */}
                 <Login/>
                 <Footer/>
 

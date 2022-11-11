@@ -63,42 +63,44 @@ if(user?.email){
             <Navbar variant={navVariant} className={navBarBack} collapseOnSelect
                     expand="lg">
                 <Container>
-                    <Navbar.Brand><NavLink className={navBarTitle} to="/"><img
-                        src={navBarLogo}/> R@ Real Estate
-                        Company</NavLink></Navbar.Brand>
+                    <Navbar.Brand><NavLink className={navBarTitle} to="/">
+                        {/* <img
+                        src={navBarLogo}/>  */}
+                        আধুনিক কৃষি খামার</NavLink></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
                         </Nav>
                         <Nav>
+                        
                             <Nav.Link><NavLink exact activeStyle={{color: '#0a8ee'}}
                                                className={navBarItem}
-                                               to="/">HOME</NavLink></Nav.Link>
+                                               to="/">হোম</NavLink></Nav.Link>
                             <Nav.Link><NavLink exact activeStyle={{color: '#0a8ee'}}
                                                className={navBarItem}
-                                               to="/service">SERVICES</NavLink></Nav.Link>
+                                               to="/service">কৃষি গবেষণা ও প্রযুক্তি</NavLink></Nav.Link>
                             <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
                                                 className={navBarItem}
-                                                to="/sale">SALE</NavLink></Nav.Link>
+                                                to="/sale">কৃষি ক্যাম্পাস</NavLink></Nav.Link>
                             <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
                                                 className={navBarItem}
-                                                to="/rent">RENT</NavLink></Nav.Link>
+                                                to="/rent">এগ্রো বিজনেস কমুনিটি</NavLink></Nav.Link>
                             <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
                                                 className={navBarItem}
-                                                to="/contact">CONTACT</NavLink></Nav.Link>
+                                                to="/krishiuddugta">কৃষি উদ্যোক্তা</NavLink></Nav.Link>
                             <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
                                                 className={navBarItem}
-                                                to="/about">ABOUT</NavLink></Nav.Link>
+                                                to="/about">জীব ও পরিবেশ</NavLink></Nav.Link>
                         
                            {!user?.email&&
     <>
      <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
                          className={navBarItem}
-                         to="/login">LOGIN</NavLink></Nav.Link>
+                         to="/login">লগইন</NavLink></Nav.Link>
      <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
                          className={navBarItem}
-                         to="/registration">REGISTRATION</NavLink></Nav.Link>
+                         to="/registration">রেজিস্ট্রেন</NavLink></Nav.Link>
     </>
     }
                         {
@@ -106,12 +108,14 @@ if(user?.email){
                            <>
                             <Nav.Link> <NavLink exact activeStyle={{color: '#0a8ee'}}
                          className={navBarItem}
-                         to="/dashboard">DASHBOARD</NavLink></Nav.Link>
-                    <button class=" btn btn-primary" onClick={()=>handleLogout()}>Logout</button>
+                         to="/dashboard">ড্যাশবোর্ড</NavLink></Nav.Link>
+                    <button class=" btn btn-danger" onClick={()=>handleLogout()}>লগআউট</button>
                            </>
                         }
+                        
 
                         </Nav>
+                        
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

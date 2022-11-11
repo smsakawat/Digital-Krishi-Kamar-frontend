@@ -10,15 +10,16 @@ class Summary extends Component {
     render() {
         return (
             <Fragment>
+               
                 <Container fluid={true} className="summaryBanner summarySection p-0">
                     <div className="summaryBannerOverlay">
                         <Container className="text-center">
-                            <Row className="countSection">
-                                <Col lg={8} md={6} sm={12}>
+                            {/* <Row className="countSection"> */}
+                                <Col  sm={4}  md={6} lg={12}>
                                     <Row className="countSection">
                                         <Col>
                                             <h1 className="countNumber">
-                                                <CountUp start={0} end={87} duration={0.6}>
+                                                <CountUp start={0} end={83} duration={0.6}>
                                                     {({countUpRef, start}) => (
                                                         <VisibilitySensor onChange={start} delayedCall>
                                                             <span ref={countUpRef}/>
@@ -26,13 +27,13 @@ class Summary extends Component {
                                                     )}
                                                 </CountUp>
                                             </h1>
-                                            <h4 className="countTitle">Total Projects Sells</h4>
+                                            <h4 className="countTitle">Total Projects</h4>
 
                                         </Col>
 
                                         <Col>
                                             <h1 className="countNumber">
-                                                <CountUp start={0} end={52} duration={0.6}>
+                                                <CountUp start={0} end={1723} duration={0.6}>
                                                     {({countUpRef, start}) => (
                                                         <VisibilitySensor onChange={start} delayedCall>
                                                             <span ref={countUpRef}/>
@@ -40,13 +41,26 @@ class Summary extends Component {
                                                     )}
                                                 </CountUp>
                                             </h1>
-                                            <h4 className="countTitle">Total Projects Rent</h4>
+                                            <h4 className="countTitle">Customers Satisfied</h4>
+
+                                        </Col>
+                                        <Col>
+                                            <h1 className="countNumber">
+                                                <CountUp start={0} end={252} duration={0.6}>
+                                                    {({countUpRef, start}) => (
+                                                        <VisibilitySensor onChange={start} delayedCall>
+                                                            <span ref={countUpRef}/>
+                                                        </VisibilitySensor>
+                                                    )}
+                                                </CountUp>
+                                            </h1>
+                                            <h4 className="countTitle">Quality Contents</h4>
 
                                         </Col>
                                     </Row>
 
                                 </Col>
-                                <Col lg={4} md={6} sm={12}>
+                                {/* <Col lg={4} md={6} sm={12}>
                                     <Card className="workCard">
 
                                         <Card.Body>
@@ -73,8 +87,8 @@ class Summary extends Component {
 
                                         </Card.Body>
                                     </Card>
-                                </Col>
-                            </Row>
+                                </Col> */}
+                            {/* </Row> */}
                         </Container>
 
                     </div>

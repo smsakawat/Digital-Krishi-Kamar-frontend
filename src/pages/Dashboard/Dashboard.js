@@ -19,6 +19,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
 import * as React from "react";
 import {
   Link,
@@ -44,7 +45,7 @@ import DashProfile from "../../components/Dashboard/DashProfile/DashProfile";
 import useAuth from "../../hooks/useAuth";
 import Review from "../../components/Dashboard/Review/Review";
 
-const drawerWidth = 240;
+const drawerWidth = 260;
 
 function Dashboard(props) {
   const history = useHistory();
@@ -62,21 +63,23 @@ function Dashboard(props) {
     <div
       style={{
         display: "flex",
+        textAlign: "center",
+        color:'rgb(156, 0, 0)',
         justifyContent: "space-between",
         flexDirection: "column",
-        minHeight: "100vh",
+        minHeight: "100vh"
+       
       }}
     >
       <div>
         <Toolbar>
           <h3
             style={{
-              fontWeight: "800",
-              fontStyle: "italic",
-              fontSize: "1.7rem",
+              fontWeight: "900",
+              fontSize: "1.5rem"
             }}
           >
-            Real Estate Vacant land
+            ADHUNIK KRISHI KHAMAR
           </h3>
         </Toolbar>
         <Divider />
@@ -96,7 +99,7 @@ function Dashboard(props) {
                 <PaymentIcon />
               </ListItemIcon>
               <Link to={`${url}/addLand`} className="drawer-link">
-                <ListItemText>Add Land</ListItemText>
+                <ListItemText>Add Products</ListItemText>
               </Link>
             </ListItem>
             <ListItem button onClick={() => history.push(`${url}/myOrders`)}>
@@ -115,7 +118,7 @@ function Dashboard(props) {
                 <ListItemText>Pay</ListItemText>
               </Link>
             </ListItem>
-            <ListItem button onClick={() => history.push(`${url}/review`)}>
+            <ListItem button onClick={() => history.push(`/review`)}>
               <ListItemIcon className="drawer-icon">
                 <RateReviewIcon />
               </ListItemIcon>
@@ -150,10 +153,10 @@ function Dashboard(props) {
                 onClick={() => history.push(`${url}/manageBicycles`)}
               >
                 <ListItemIcon>
-                  <DirectionsBikeIcon />
+                  <ProductionQuantityLimitsIcon />
                 </ListItemIcon>
                 <Link to={`${url}/manageBicycles`} className="drawer-link">
-                  <ListItemText>Manage Lands</ListItemText>
+                  <ListItemText>Add Products</ListItemText>
                 </Link>
               </ListItem>
               <ListItem

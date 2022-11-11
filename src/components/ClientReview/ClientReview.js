@@ -47,7 +47,7 @@ class ClientReview extends Component {
         return (
             <Fragment>
 
-                <Container className="text-center">
+                <Container className="text-center" id="client-review">
                     <h1 className="serviceMainTitle">CLIENT SAYS</h1>
                     <Slider {...settings}>
                         <div>
@@ -55,10 +55,8 @@ class ClientReview extends Component {
                                 <Col lg={6} md={6} sm={12}>
                                     <img className="circleImg"
                                          src="https://st2.depositphotos.com/2783505/8415/i/600/depositphotos_84158918-stock-photo-passport-picture-of-a-hispanic.jpg"/>
-                                    <h1 className="serviceName">Md. Asiful Alam</h1>
-                                    <p className="serviceDescription"> i analysis the requirement of project.
-                                        According to the requirement i make a proper technical analysis, then i build a
-                                        software architecture. According to the planning i start coding</p>
+                                    <h1 className="serviceName"> মোঃ আসিফুল আলম</h1>
+                                    <p className="serviceDescription"> এই সাইটটি আসলে অনেক উপকারী একটি সাইট</p>
                                 </Col>
                             </Row>
                         </div>

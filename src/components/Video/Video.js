@@ -43,7 +43,7 @@ class Video extends Component {
                     <Modal.Body>
                         <Player>
                             <source
-                                src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"/>
+                                src="https://www.farmingfuturebd.com/media/imgAll/bg/FFB_30%20Sec_V0.1.mp4"/>
                             <BigPlayButton position="center"/>
                         </Player>
                     </Modal.Body>

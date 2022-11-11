@@ -4,6 +4,7 @@ import PageTop from "../components/PageTop/PageTop";
 import Footer from "../components/Footer/Footer";
 import ContactSection from "../components/ContactSection/ContactSection";
 import Header from '../components/Header/Header';
+import Orthouddug from '../components/Orthouddug/Orthouddug';
 
 class ContactPage extends Component {
 
@@ -16,7 +17,8 @@ class ContactPage extends Component {
         return (
             <Fragment>
                 <Header title="Contact"/>
-                <PageTop pagetitle="Contact"/>
+                <PageTop pagetitle="যোগাযোগ করুন"/>
+                {/* <Orthouddug /> */}
                 <ContactSection/>
 
                 <Footer/>
