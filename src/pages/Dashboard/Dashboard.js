@@ -79,7 +79,7 @@ function Dashboard(props) {
               fontSize: "1.5rem"
             }}
           >
-            ADHUNIK KRISHI KHAMAR
+            আধুনিক কৃষি খামার
           </h3>
         </Toolbar>
         <Divider />
@@ -91,7 +91,7 @@ function Dashboard(props) {
                 <HomeIcon />
               </ListItemIcon>
               <Link to="/" className="drawer-link">
-                <ListItemText>Home</ListItemText>
+                <ListItemText>হোম</ListItemText>
               </Link>
             </ListItem>
             <ListItem button onClick={() => history.push(`${url}/pay`)}>
@@ -99,7 +99,7 @@ function Dashboard(props) {
                 <PaymentIcon />
               </ListItemIcon>
               <Link to={`${url}/addLand`} className="drawer-link">
-                <ListItemText>Add Products</ListItemText>
+                <ListItemText>পণ্য যোগ করুন</ListItemText>
               </Link>
             </ListItem>
             <ListItem button onClick={() => history.push(`${url}/myOrders`)}>
@@ -107,7 +107,7 @@ function Dashboard(props) {
                 <FormatListBulletedIcon />
               </ListItemIcon>
               <Link to={`${url}/mybookings`} className="drawer-link">
-                <ListItemText>My Bookings</ListItemText>
+                <ListItemText>আমার বুকিং</ListItemText>
               </Link>
             </ListItem>
             <ListItem button onClick={() => history.push(`${url}/pay`)}>
@@ -115,7 +115,7 @@ function Dashboard(props) {
                 <PaymentIcon />
               </ListItemIcon>
               <Link to={`${url}/pay`} className="drawer-link">
-                <ListItemText>Pay</ListItemText>
+                <ListItemText>পেমেন্ট</ListItemText>
               </Link>
             </ListItem>
             <ListItem button onClick={() => history.push(`/review`)}>
@@ -123,7 +123,7 @@ function Dashboard(props) {
                 <RateReviewIcon />
               </ListItemIcon>
               <Link to={`${url}/review`} className="drawer-link">
-                <ListItemText>Review</ListItemText>
+                <ListItemText>পর্যালোচনা</ListItemText>
               </Link>
             </ListItem>
           </List>
@@ -144,7 +144,7 @@ function Dashboard(props) {
                 <ListItemIcon>
                   <AdminPanelSettingsIcon />
                 </ListItemIcon>
-                <Link to={`${url}/makeAdmin`} className="drawer-link">
+                <Link to=''  className="drawer-link">
                   <ListItemText>Make Admin</ListItemText>
                 </Link>
               </ListItem>
@@ -189,7 +189,7 @@ function Dashboard(props) {
           logOut();
           history.push('/')
         }}>
-          Logout
+          লগআউট
         </Button>
       </div>
     </div>
@@ -220,7 +220,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Dashboard
+          ড্যাশবোর্ড
           </Typography>
         </Toolbar>
       </AppBar>
