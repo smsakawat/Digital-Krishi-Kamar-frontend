@@ -1,27 +1,21 @@
-import axios from "axios";
-import {useState,useEffect} from 'react'
 import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
-  updateProfile
+  updateProfile,
 } from "firebase/auth";
+import { useEffect, useState } from "react";
 import initializeAuthenticaiton from "../Firebase/firebase.init";
 
 // initialize firebase
 initializeAuthenticaiton();
 
-
 const useFirebase = () => {
-  const adminEmail= "admin@gmail.com";
   const auth = getAuth();
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
-  // for checking if the user is admin or not
-  const [admin, setAdmin] = useState(false);
 
   //   register user
   const registerUser = (email, password) => {
@@ -35,12 +29,32 @@ const useFirebase = () => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  // save user details for after register
+  const saveUser = (email, displayName, mobile, nidNo) => {
+    const user = { email, displayName, mobile, nidNo };
+    console.log(user);
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      body: JSON.stringify(user),
+      headers: {
+        "Content-type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+      })
+      .catch((err) => {
+        console.log(`Here's the error  from firebase ${err}`);
+      });
+  };
+
   //   logout user
   const logOut = () => {
     setIsLoading(true);
     signOut(auth)
       .then(() => {
-       alert("Logout successfull")
+        alert("Logout successfull");
       })
       .finally(() => setIsLoading(false));
   };
@@ -52,14 +66,12 @@ const useFirebase = () => {
     }).then(() => {});
   };
 
-
   // setting an observer to hanlde user state
   useEffect(() => {
     setIsLoading(true);
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-       
       } else {
         setUser({});
       }
@@ -69,32 +81,16 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, []);
 
-  // cheking if the user is admin or not
-  useEffect(() => {
-    
-  if(user?.email==="admin@gmail.com"){
-    setAdmin(true)
-  }else{
-    setAdmin(false)
-  }
-  }, [user.email]);
-
-
   return {
     user,
     setUser,
     registerUser,
     updateName,
-    admin,
     isLoading,
     setIsLoading,
     loginWithEmail,
     logOut,
-    
-
-  
-  
+    saveUser,
   };
 };
 export default useFirebase;
-
