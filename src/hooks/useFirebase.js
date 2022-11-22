@@ -16,6 +16,7 @@ const useFirebase = () => {
   const auth = getAuth();
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [admin, setAdmin] = useState(true);
 
   //   register user
   const registerUser = (email, password) => {
@@ -30,8 +31,8 @@ const useFirebase = () => {
   };
 
   // save user details for after register
-  const saveUser = (email, displayName, mobile, nidNo) => {
-    const user = { email, displayName, mobile, nidNo };
+  const saveUser = (email, displayName, mobile, location) => {
+    const user = { email, displayName, mobile, location };
     console.log(user);
     fetch("http://localhost:5000/users", {
       method: "POST",
@@ -91,6 +92,7 @@ const useFirebase = () => {
     loginWithEmail,
     logOut,
     saveUser,
+    admin,
   };
 };
 export default useFirebase;

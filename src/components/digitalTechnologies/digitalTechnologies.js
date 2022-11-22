@@ -100,27 +100,34 @@ export default function DigitalTechnologies() {
               <Row sm={12} md={6} lg={4} w={100} className="techItems">
                 {technologies
                   .filter((tech) => tech.category === "vehicle")
-                  .map(({ title, picture, des, id, category }) => {
+                  .map(({ title, picture, price, des, _id }) => {
                     return (
                       <Card
                         className="Ecard"
                         // style={{ width: "15rem", height: "20rem" }}
                       >
-                        <Link to="./EcomDetails">
+                        <Link to={`/digitalTechnologies/${_id}`}>
                           <Card.Img
                             variant="top"
                             className="Eimages"
                             src={picture}
                           />
                           <Card.Body>
-                            <Card.Text style={{ color: "gray" }}>
-                              {des}
-                            </Card.Text>
                             <Card.Title
-                              style={{ color: "black", fontSize: "30px" }}
+                              style={{ color: "black", fontSize: "22px" }}
                             >
                               {title}
                             </Card.Title>
+                            <Card.Text
+                              style={{ color: "#666", lineHeight: 1.6 }}
+                            >
+                              {des}
+                            </Card.Text>
+                            <Card.Text
+                              style={{ color: "#333", fontSize: "18px" }}
+                            >
+                              {price}
+                            </Card.Text>
                           </Card.Body>
                         </Link>
                       </Card>
@@ -148,27 +155,34 @@ export default function DigitalTechnologies() {
               <Row sm={12} md={6} lg={4} w={100} className="techItems">
                 {technologies
                   .filter((tech) => tech.category === "loader")
-                  .map(({ title, picture, des, id, category }) => {
+                  .map(({ title, picture, price, des, _id }) => {
                     return (
                       <Card
                         className="Ecard"
                         // style={{ width: "15rem", height: "20rem" }}
                       >
-                        <Link to="./EcomDetails">
+                        <Link to={`/digitalTechnologies/${_id}`}>
                           <Card.Img
                             variant="top"
                             className="Eimages"
                             src={picture}
                           />
                           <Card.Body>
-                            <Card.Text style={{ color: "gray" }}>
-                              {des}
-                            </Card.Text>
                             <Card.Title
-                              style={{ color: "black", fontSize: "30px" }}
+                              style={{ color: "black", fontSize: "22px" }}
                             >
                               {title}
                             </Card.Title>
+                            <Card.Text
+                              style={{ color: "#666", lineHeight: 1.6 }}
+                            >
+                              {des}
+                            </Card.Text>
+                            <Card.Text
+                              style={{ color: "#333", fontSize: "18px" }}
+                            >
+                              {price}
+                            </Card.Text>
                           </Card.Body>
                         </Link>
                       </Card>
@@ -209,27 +223,34 @@ export default function DigitalTechnologies() {
                     <Row sm={12} md={6} lg={4} w={100} className="techItems">
                       {technologies
                         .filter((tech) => tech.category === "medicine")
-                        .map(({ title, picture, des, id, category }) => {
+                        .map(({ title, picture, price, des, _id }) => {
                           return (
                             <Card
                               className="Ecard"
                               // style={{ width: "15rem", height: "20rem" }}
                             >
-                              <Link to="./EcomDetails">
+                              <Link to={`/digitalTechnologies/${_id}`}>
                                 <Card.Img
                                   variant="top"
                                   className="Eimages"
                                   src={picture}
                                 />
                                 <Card.Body>
-                                  <Card.Text style={{ color: "gray" }}>
-                                    {des}
-                                  </Card.Text>
                                   <Card.Title
-                                    style={{ color: "black", fontSize: "30px" }}
+                                    style={{ color: "black", fontSize: "22px" }}
                                   >
                                     {title}
                                   </Card.Title>
+                                  <Card.Text
+                                    style={{ color: "#666", lineHeight: 1.6 }}
+                                  >
+                                    {des}
+                                  </Card.Text>
+                                  <Card.Text
+                                    style={{ color: "#333", fontSize: "18px" }}
+                                  >
+                                    {price}
+                                  </Card.Text>
                                 </Card.Body>
                               </Link>
                             </Card>
@@ -260,27 +281,34 @@ export default function DigitalTechnologies() {
               <Row sm={12} md={6} lg={4} w={100} className="techItems">
                 {technologies
                   .filter((tech) => tech.category === "cultivator")
-                  .map(({ title, picture, des, id, category }) => {
+                  .map(({ title, picture, price, des, _id }) => {
                     return (
                       <Card
                         className="Ecard"
                         // style={{ width: "15rem", height: "20rem" }}
                       >
-                        <Link to="./EcomDetails">
+                        <Link to={`/digitalTechnologies/${_id}`}>
                           <Card.Img
                             variant="top"
                             className="Eimages"
                             src={picture}
                           />
                           <Card.Body>
-                            <Card.Text style={{ color: "gray" }}>
-                              {des}
-                            </Card.Text>
                             <Card.Title
-                              style={{ color: "black", fontSize: "30px" }}
+                              style={{ color: "black", fontSize: "22px" }}
                             >
                               {title}
                             </Card.Title>
+                            <Card.Text
+                              style={{ color: "#666", lineHeight: 1.6 }}
+                            >
+                              {des.slice(0, 130)}...
+                            </Card.Text>
+                            <Card.Text
+                              style={{ color: "#333", fontSize: "18px" }}
+                            >
+                              {price}
+                            </Card.Text>
                           </Card.Body>
                         </Link>
                       </Card>

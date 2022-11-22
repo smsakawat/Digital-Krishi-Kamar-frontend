@@ -23,7 +23,7 @@ const DashProfile = (props) => {
         <p>Email: {user.email}</p>
         <p>Phone: {user.mobile ? user.mobile : "01876980021"}</p>
         <p style={{ marginBottom: "0.5rem" }}>
-          NID : {user.nidNo ? user.nidNo : "9749273492739"}
+          Location : {user.location}
         </p>
         <Button
           variant="contained"

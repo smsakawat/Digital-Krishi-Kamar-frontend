@@ -42,13 +42,13 @@ const SignUp = () => {
       .then((result) => {
         // console.log(data);
         // console.log(data.displayName);
-        saveUser(data.email, data.name, data.mobile, data.nidNo);
+        saveUser(data.email, data.name, data.mobile, data.location);
         setUser({
           ...user,
           email: data.email,
           displayName: data.name,
           mobile: data.mobile,
-          nidNo: data.nidNo,
+          location: data.location,
           imgUrl:
             "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
         });
@@ -113,13 +113,13 @@ const SignUp = () => {
                 </div>
                 <br />
                 <div className="form-group">
-                  <label className="loginText">National ID</label>
+                  <label className="loginText">Location</label>
                   <input
                     style={{ borderRadius: "20px" }}
-                    {...register("nidNo")}
+                    {...register("location")}
                     type="text"
                     className="form-control"
-                    placeholder="Enter nid no"
+                    placeholder="Enter your location"
                   />
                 </div>
                 <br />

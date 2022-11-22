@@ -1,10 +1,9 @@
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
-import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import HomeIcon from "@mui/icons-material/Home";
-import ManageAccountsSharpIcon from "@mui/icons-material/ManageAccountsSharp";
 import MenuIcon from "@mui/icons-material/Menu";
 import PaymentIcon from "@mui/icons-material/Payment";
+import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 import { Button } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
@@ -19,7 +18,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
 import * as React from "react";
 import {
   Link,
@@ -29,21 +27,9 @@ import {
   useRouteMatch,
 } from "react-router-dom";
 
-
-import AddLand from "../../components/Dashboard/AddLand/AddLand";
-import ManageBookings from "../../components/Dashboard/ManageBookings/ManageBookings";
-import ManageLands from "../../components/Dashboard/ManageLands/ManageLands";
-
-
-
-
-
-
-import MyBookings from "../../components/Dashboard/MyBookings/MyBookings";
-import MakeAdmin from "../../components/Dashboard/MakeAdmin/MakeAdmin";
 import DashProfile from "../../components/Dashboard/DashProfile/DashProfile";
+import Ecom from "../../components/Ecom/Ecom";
 import useAuth from "../../hooks/useAuth";
-import Review from "../../components/Dashboard/Review/Review";
 
 const drawerWidth = 260;
 
@@ -64,11 +50,10 @@ function Dashboard(props) {
       style={{
         display: "flex",
         textAlign: "center",
-        color:'rgb(156, 0, 0)',
+        color: "rgb(156, 0, 0)",
         justifyContent: "space-between",
         flexDirection: "column",
-        minHeight: "100vh"
-       
+        minHeight: "100vh",
       }}
     >
       <div>
@@ -76,7 +61,7 @@ function Dashboard(props) {
           <h3
             style={{
               fontWeight: "900",
-              fontSize: "1.5rem"
+              fontSize: "1.5rem",
             }}
           >
             আধুনিক কৃষি খামার
@@ -98,7 +83,7 @@ function Dashboard(props) {
               <ListItemIcon>
                 <PaymentIcon />
               </ListItemIcon>
-              <Link to={`${url}/addLand`} className="drawer-link">
+              <Link to={`${url}/addProduct`} className="drawer-link">
                 <ListItemText>পণ্য যোগ করুন</ListItemText>
               </Link>
             </ListItem>
@@ -144,33 +129,21 @@ function Dashboard(props) {
                 <ListItemIcon>
                   <AdminPanelSettingsIcon />
                 </ListItemIcon>
-                <Link to=''  className="drawer-link">
+                <Link to="" className="drawer-link">
                   <ListItemText>Make Admin</ListItemText>
                 </Link>
               </ListItem>
               <ListItem
                 button
-                onClick={() => history.push(`${url}/manageBicycles`)}
+                onClick={() => history.push(`${url}/addProduct`)}
               >
                 <ListItemIcon>
                   <ProductionQuantityLimitsIcon />
                 </ListItemIcon>
-                <Link to={`${url}/manageBicycles`} className="drawer-link">
+                <Link to={`${url}/addProduct`} className="drawer-link">
                   <ListItemText>Add Products</ListItemText>
                 </Link>
               </ListItem>
-              <ListItem
-                button
-                onClick={() => history.push(`${url}/manageBookings`)}
-              >
-                <ListItemIcon>
-                  <ManageAccountsSharpIcon />
-                </ListItemIcon>
-                <Link to={`${url}/manageBookings`} className="drawer-link">
-                  <ListItemText>Manage Bookings</ListItemText>
-                </Link>
-              </ListItem>
-             
             </List>
           </>
         )}
@@ -185,10 +158,14 @@ function Dashboard(props) {
           paddingBottom: "30px",
         }}
       >
-        <Button variant="contained" color="error" onClick={()=>{
-          logOut();
-          history.push('/')
-        }}>
+        <Button
+          variant="contained"
+          color="error"
+          onClick={() => {
+            logOut();
+            history.push("/");
+          }}
+        >
           লগআউট
         </Button>
       </div>
@@ -220,7 +197,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-          ড্যাশবোর্ড
+            ড্যাশবোর্ড
           </Typography>
         </Toolbar>
       </AppBar>
@@ -281,23 +258,14 @@ function Dashboard(props) {
           <Route exact path="/dashboard">
             <DashProfile user={user} />
           </Route>
-
-          {user.email && !admin && (
-            <Route exact path={path}>
-              <MyBookings  />
-            </Route>
-          )}
-          {/* {user.email && admin && (
-            <Route exact path={path}>
-              <ManageOrders />
-            </Route>
-          )} */}
-
-          <Route exact path={`${path}/review`}>
-            <Review />
+          <Route exact path={`/dashboard/addProduct`}>
+            <Ecom />
           </Route>
-         
           <Route exact path={`${path}/makeAdmin`}>
+            <Ecom />
+          </Route>
+
+          {/* <Route exact path={`${path}/makeAdmin`}>
             <MakeAdmin />
           </Route>
           <Route exact path={`${path}/`}>
@@ -308,8 +276,7 @@ function Dashboard(props) {
           </Route>
           <Route exact path={`${path}/manageBookings`}>
             <ManageBookings />
-          </Route>
-          
+          </Route> */}
         </Switch>
       </Box>
     </Box>
