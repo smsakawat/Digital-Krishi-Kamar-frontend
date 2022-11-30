@@ -10,12 +10,13 @@ import "./digitalTechDetails.css";
 const DigitalTechDetails = () => {
   const [item, setItem] = useState({});
   const { id } = useParams();
-  const { title, des, _id, category, picture } = item || {};
+  const { title, des, _id, category, picture, price } = item || {};
   const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
     setShowLoader(true);
-    axios.get(`http://localhost:5000/digitalTechnologies/${id}`).then((res) => {
+    const url = `http://localhost:5000/digitalTechnologies/${id}`;
+    axios.get(url).then((res) => {
       setItem(res.data);
       setShowLoader(false);
       console.log(res.data);
@@ -45,20 +46,11 @@ const DigitalTechDetails = () => {
                     color: "black",
                     fontSize: "25px",
                     textAlign: "center",
-                    marginBottom: "5rem",
+                    marginBottom: "2rem",
                   }}
                 >
-                  {title}
+                  {category ? category.toUpperCase() : null}
                 </Card.Title>
-                <Card.Text
-                  style={{
-                    color: "black",
-                    marginLeft: "20px",
-                    textTransfrom: "uppercase",
-                  }}
-                >
-                  {category}
-                </Card.Text>
                 <Card.Text
                   style={{
                     color: "gray",
@@ -76,6 +68,16 @@ const DigitalTechDetails = () => {
                   }}
                 >
                   {des}
+                </Card.Text>
+                <Card.Text
+                  style={{
+                    color: "#333",
+                    margin: "18px 0",
+                    fontSize: "18px",
+                    fontWeight: "600",
+                  }}
+                >
+                  $ {price}
                 </Card.Text>
                 <Button variant="success" style={{ marginRight: "20px" }}>
                   Buy Now

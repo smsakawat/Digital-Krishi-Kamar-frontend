@@ -78,10 +78,11 @@ export default function DigitalTechnologies() {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: "divider" }}
       >
-        <Tab label="Vehicle" {...a11yProps(0)} />
-        <Tab label="Loader" {...a11yProps(1)} />
+        <Tab label="Tractor" {...a11yProps(0)} />
+        <Tab label="Sprayer" {...a11yProps(1)} />
         <Tab label="Medicine" {...a11yProps(2)} />
         <Tab label="Cultivator" {...a11yProps(3)} />
+        <Tab label="Furtilizer" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0} className="tabPanel">
         {showLoader ? (
@@ -99,7 +100,7 @@ export default function DigitalTechnologies() {
             <Col>
               <Row sm={12} md={6} lg={4} w={100} className="techItems">
                 {technologies
-                  .filter((tech) => tech.category === "vehicle")
+                  .filter((tech) => tech.category === "tractor")
                   .map(({ title, picture, price, des, _id }) => {
                     return (
                       <Card
@@ -121,12 +122,12 @@ export default function DigitalTechnologies() {
                             <Card.Text
                               style={{ color: "#666", lineHeight: 1.6 }}
                             >
-                              {des}
+                              {des.slice(0, 90)}...
                             </Card.Text>
                             <Card.Text
                               style={{ color: "#333", fontSize: "18px" }}
                             >
-                              {price}
+                              $ {price}
                             </Card.Text>
                           </Card.Body>
                         </Link>
@@ -154,7 +155,7 @@ export default function DigitalTechnologies() {
             <Col>
               <Row sm={12} md={6} lg={4} w={100} className="techItems">
                 {technologies
-                  .filter((tech) => tech.category === "loader")
+                  .filter((tech) => tech.category === "sprayer")
                   .map(({ title, picture, price, des, _id }) => {
                     return (
                       <Card
@@ -176,12 +177,12 @@ export default function DigitalTechnologies() {
                             <Card.Text
                               style={{ color: "#666", lineHeight: 1.6 }}
                             >
-                              {des}
+                              {des.slice(0, 90)}...
                             </Card.Text>
                             <Card.Text
                               style={{ color: "#333", fontSize: "18px" }}
                             >
-                              {price}
+                              $ {price}
                             </Card.Text>
                           </Card.Body>
                         </Link>
@@ -244,12 +245,12 @@ export default function DigitalTechnologies() {
                                   <Card.Text
                                     style={{ color: "#666", lineHeight: 1.6 }}
                                   >
-                                    {des}
+                                    {des.slice(0, 90)}...
                                   </Card.Text>
                                   <Card.Text
                                     style={{ color: "#333", fontSize: "18px" }}
                                   >
-                                    {price}
+                                    $ {price}
                                   </Card.Text>
                                 </Card.Body>
                               </Link>
@@ -302,12 +303,67 @@ export default function DigitalTechnologies() {
                             <Card.Text
                               style={{ color: "#666", lineHeight: 1.6 }}
                             >
-                              {des.slice(0, 130)}...
+                              {des.slice(0, 90)}...
                             </Card.Text>
                             <Card.Text
                               style={{ color: "#333", fontSize: "18px" }}
                             >
-                              {price}
+                              $ {price}
+                            </Card.Text>
+                          </Card.Body>
+                        </Link>
+                      </Card>
+                    );
+                  })}
+              </Row>
+            </Col>
+          </Row>
+        )}
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        {showLoader ? (
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <CircularProgress />
+          </Box>
+        ) : (
+          <Row>
+            <Col>
+              <Row sm={12} md={6} lg={4} w={100} className="techItems">
+                {technologies
+                  .filter((tech) => tech.category === "furtilizer")
+                  .map(({ title, picture, price, des, _id }) => {
+                    return (
+                      <Card
+                        className="Ecard"
+                        // style={{ width: "15rem", height: "20rem" }}
+                      >
+                        <Link to={`/digitalTechnologies/${_id}`}>
+                          <Card.Img
+                            variant="top"
+                            className="Eimages"
+                            src={picture}
+                          />
+                          <Card.Body>
+                            <Card.Title
+                              style={{ color: "black", fontSize: "22px" }}
+                            >
+                              {title}
+                            </Card.Title>
+                            <Card.Text
+                              style={{ color: "#666", lineHeight: 1.6 }}
+                            >
+                              {des.slice(0, 90)}...
+                            </Card.Text>
+                            <Card.Text
+                              style={{ color: "#333", fontSize: "18px" }}
+                            >
+                              $ {price}
                             </Card.Text>
                           </Card.Body>
                         </Link>

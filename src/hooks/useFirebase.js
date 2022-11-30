@@ -4,7 +4,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
-  updateProfile,
+  updateProfile
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthenticaiton from "../Firebase/firebase.init";
@@ -31,8 +31,8 @@ const useFirebase = () => {
   };
 
   // save user details for after register
-  const saveUser = (email, displayName, mobile, location) => {
-    const user = { email, displayName, mobile, location };
+  const saveUser = (email, displayName, mobile, location,nidNo) => {
+    const user = { email, displayName, mobile, location,nidNo };
     console.log(user);
     fetch("http://localhost:5000/users", {
       method: "POST",
